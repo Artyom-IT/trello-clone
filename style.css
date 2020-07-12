@@ -39,6 +39,7 @@ body {
 .column {
   background: #f1f1f1;
   padding: 10px 15px;
+  position: relative;
 }
 
 .adder {
@@ -95,6 +96,31 @@ body {
   color: rgb(82, 106, 122);
 
   transition: background-color 0.2s linear;
+
+  position: relative;
+}
+
+.note p {
+  margin: 0;
+}
+
+.note:hover .close {
+  display: block;
+}
+
+.close {
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 5px;
+  font-size: 1.2rem;
+  display: none;
+  cursor: pointer;
+}
+
+.close:hover {
+  opacity: 1;
 }
 
 .note:hover {
@@ -128,4 +154,23 @@ body {
 
 .note.under {
   opacity: 0.5;
+}
+
+.close-column {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.5;
+  padding-right: 5px;
+  font-size: 1.2rem;
+  display: none;
+  cursor: pointer;
+}
+
+.close-column:hover {
+  opacity: 1;
+}
+
+.column:hover .close-column {
+  display: block;
 }
